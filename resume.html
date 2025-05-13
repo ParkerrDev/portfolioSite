@@ -1,80 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Andrew Parker Hunt</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Parker Hunt - Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: white;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .intro img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ccc; /* outline border around memoji */
+    }
+    .intro .text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .intro .text h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .intro .text p {
+      margin: 0.25rem 0 0;
+      color: #555;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 80px;
+      align-items: flex-end;
+    }
+    .links a {
+      color: #1a0dab;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      border-top: 1px solid #ccc;
+      padding-top: 0.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    .no-border {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .item {
+      background: white;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .item h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .item p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+    .three-column-row {
+      display: flex;
+      gap: 2rem;
+    }
+    .three-column-row section {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
+      <div class="intro">
+        <img src="imgs/memoji-circle.webp" alt="Andrew's Memoji">
+        <div class="text">
+          <h1>Andrew Parker Hunt</h1>
+          <p>Student in Clovis, California, USA</p>
+        </div>
+      </div>
+      <div class="links">
+        <a href="mailto:email@parkerhunt.me">email@parkerhunt.me</a>
+        <a href="https://parkerhunt.me">parkerhunt.me</a>
+        <a href="https://github.com/ParkerDev">github.com/ParkerDev</a>
+      </div>
     </header>
 
-    <main>
-        <section id="resume">
-            <h1>Resume</h1>
-            
-            <article id="education">
-                <h2>Education</h2>
-                <div>
-                    <h3>Floyd B. Buchanan High School</h3>
-                    <p>Third-year high school student</p>
-                    <p>Expected Graduation: 2026</p>
-                </div>
-            </article>
-            
-            <article id="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Software Development</li>
-                    <li>Computer Science</li>
-                    <li>Cybersecurity</li>
-                    <li>Linux</li>
-                    <li>Martial Arts</li>
-                    <li>Hiking</li>
-                </ul>
-            </article>
-            
-            <article id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>Trion Website</li>
-                    <li>PETEr (Science Fair Robot)</li>
-                    <li>Terry-game - AfterDavis</li>
-                    <li>369-MovieStudio</li>
-                    <li>FRC QRCodeScanner</li>
-                </ul>
-            </article>
-            
-            <article id="achievements">
-                <h2>Achievements</h2>
-                <ul>
-                    <li>1st Degree Adult Black Belt in Martial Arts</li>
-                    <li>Hiked to the summit of Mt. Whitney (14,505 ft)</li>
-                    <li>Hiked to the summit of El Capitan (7,573 ft)</li>
-                    <li>Hiked to the summit of Half-dome (8,946 ft)</li>
-                </ul>
-            </article>
-            
-            <article id="contact">
-                <h2>Contact Information</h2>
-                <p>Email: <a href="mailto:andrew@example.com">andrew@example.com</a></p>
-                <p>GitHub: <a href="https://github.com/" target="_blank">GitHub Profile</a></p>
-                <p>LinkedIn: <a href="https://linkedin.com/" target="_blank">LinkedIn Profile</a></p>
-            </article>
-        </section>
-    </main>
+    <section>
+      <h2 class="no-border">Experience</h2>
+      <div class="grid">
+        <div class="item">
+          <h3>FRC Team 1671 - Programmer, High School Robotics (2022 – 2023)</h3>
+          <p>Worked alongside other members and coaches to deploy a scouting system for the robotics team. Personally designed and developed the counterpart graphical application to the scouting system in Python with technologies like OpenCV and Qt. Worked with robotics programming and design in Java.</p>
+        </div>
+        <div class="item">
+          <h3>California Science and Engineering Fair - Contestant, Engineering Project (2022 – 2024)</h3>
+          <p>Worked in a team over the course of 2 years to build an autonomous material analysis and filtration robot for the removal of microplastics from water. Designed the electronics system for the robot. Programmed the machine learning algorithm responsible for analyzing materials using technologies like ScikitLearn, Numpy, Pandas, and PyTorch.</p>
+        </div>
+        <div class="item">
+          <h3>Trion Supercars Website - Designer & Developer, Web Application Development (2024 – 2025)</h3>
+          <p>Designed, developed, and deployed a website for the company Trion Supercars. I designed the website in Figma and coded it in HTML, CSS, SCSS, and Javascript. I used technologies like AlpineJS for templating various elements of the website design and threeJS for rendering 3D models of cars in the car configurator. I then deployed the site on Netlify.</p>
+        </div>
+        <div class="item">
+          <h3>Center for Advanced Research and Technology - Student, Web Application Development (2024 – Present)</h3>
+          <p>Developed a website for the supercar company Trion Supercars using HTML, CSS and Javascript. Worked with team members to design the website in Figma. Worked on other relevant projects leading up to the Trion website such as the website for Ray Bradbury smarthomes in HTML and CSS.</p>
+        </div>
+        <div class="item">
+          <h3>Intro To Engineering Design - Student, Buchanan High School (2023 – 2024)</h3>
+          <p>Designed 3D Models using the CAD software Fusion 360 to create various items such as keychains, selfie-sticks, phone cases, neon lights, etc. 3D Printed various parts in Bambu Studio on multiple Bambu X1 Carbons and other various printers.</p>
+        </div>
+        <div class="item">
+          <h3>Honors Principles of Engineering - Student, Buchanan High School (2022 – 2023)</h3>
+          <p>Worked with student peers to design and build a marble sorting machine using VEX parts. Wrote the entirety of code for the marble sorting system in Python. Learned the basics of engineering design and construction by designing and constructing small bridges, building circuits, etc.</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Andrew Parker Hunt. All rights reserved.</p>
-    </footer>
+    <div class="three-column-row">
+      <section>
+        <h2>Education</h2>
+        <div class="item">
+          <h3>Buchanan High School - General Education</h3>
+          <p>Clovis, California<br>2022 – Present</p>
+        </div>
+        <div class="item">
+          <h3>Center for Advanced Research and Technology - Web Application Development</h3>
+          <p>Clovis, California<br>2024 – Present</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Other</h2>
+        <div class="item">
+          <h3>Martial Arts - 1st Degree Adult Black Belt</h3>
+          <p>AAMA Clovis, California<br>2012 – 2024</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills and Technologies</h2>
+        <div class="item">
+          <p><strong>Languages:</strong> Python, BASH, HTML, CSS/SCSS, JavaScript, Nix</p>
+          <p><strong>Technologies:</strong> OpenCV, ScikitLearn, Numpy, Pandas, SQL, Selenium, Qt</p>
+          <p><strong>Tools:</strong> Linux, Figma, Git, GitLab, GitHub, VSCode, Zed, Neovim, Adobe Suite, Fusion360, Qt Designer</p>
+        </div>
+      </section>
+    </div>
+
+  </div>
 </body>
 </html>
