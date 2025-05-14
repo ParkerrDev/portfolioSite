@@ -2,52 +2,212 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000">
+    <meta name="description" content="Andrew Parker Hunt's Blog | Thoughts and articles on software development and technology">
+    <meta name="keywords" content="Andrew Parker Hunt, Blog, Technology, Programming, Cybersecurity">
+    <meta name="author" content="Andrew Parker Hunt">
     <title>Blog - Andrew Parker Hunt</title>
+    <link rel="icon" href="assets/memoji-circle.webp" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="body">
+    <div id="preloader"></div>
+    <noscript>Allow Javascript</noscript>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
+        <div class="navbar breath" id="navbar">
+            <div class="hey">Hey!</div>
+            <div class="logo" tabindex="0" aria-label="Andrew Parker Hunt logo">
+                <div class="logo-top">
+                    <img src="/imgs/memoji-circle.webp" alt="animation-head" id="nav-avatar">
+                </div>
+            </div>
+            <div class="navbar-tabs box-shadow" id="navbar-tabs">
+                <ul class="navbar-tabs-ul">
+                    <li class="home" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+                        <a href="index.html" tabindex="0" aria-label="Home menu button">
+                            &#10100; Home &#10101;
+                        </a>
+                    </li>
+
+                    <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+                        <a href="about.html" aria-label="about menu button">
+                            &#10100; About &#10101;
+                        </a>
+                    </li>
+
+                    <li class="blog activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+                        <a href="blog.html" aria-label="blog menu button">
+                            &#10100; Blog &#10101;
+                        </a>
+                    </li>
+
+                    <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+                        <a href="projects.html" aria-label="projects menu button">
+                            &#10100; Projects &#10101;
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section id="blog">
-            <h1>Blog Posts</h1>
-            
-            <article>
-                <h2>My Journey in Programming</h2>
-                <time datetime="2025-05-01">May 1, 2025</time>
-                <p>This is a placeholder for a blog post about my programming journey.</p>
-                <a href="#">Read more</a>
-            </article>
-            
-            <article>
-                <h2>Linux: My Daily Driver</h2>
-                <time datetime="2025-04-15">April 15, 2025</time>
-                <p>This is a placeholder for a blog post about using Linux as my daily driver.</p>
-                <a href="#">Read more</a>
-            </article>
-            
-            <article>
-                <h2>My Experience with Cybersecurity</h2>
-                <time datetime="2025-03-20">March 20, 2025</time>
-                <p>This is a placeholder for a blog post about my experiences with cybersecurity.</p>
-                <a href="#">Read more</a>
-            </article>
+        <!-- Mobile hamburger menu -->
+        <div class="hamburger" id="hamburger" data-aos="fade">
+            <div class="hamburgerbase">
+                <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
+                    <span class="burger-bar" id="burger-bar1"></span>
+                    <span class="burger-bar" id="burger-bar2"></span>
+                    <span class="burger-bar" id="burger-bar3"></span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="mobiletogglemenu" id="mobiletogglemenu">
+            <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
+                <li id="home-mobile-tab" class="mobile-navbar-tabs-li home" onclick="hidemenubyli()">
+                    <a href="index.html" tabindex="0" aria-label="Home menu button">
+                        &#60;/Home&#62;
+                    </a>
+                </li>
+
+                <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
+                    <a href="about.html" tabindex="0" aria-label="about menu button">
+                        &#60;/AboutMe&#62;
+                    </a>
+                </li>
+                
+                <li id="blog-mobile-tab" class="mobile-navbar-tabs-li blog activeThismobiletab" onclick="hidemenubyli()">
+                    <a href="blog.html" tabindex="0" aria-label="blog menu button">
+                        &#60;/Blog&#62;
+                    </a>
+                </li>
+                
+                <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
+                    <a href="projects.html" tabindex="0" aria-label="projects menu button">
+                        &#60;/Projects&#62;
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Blog Preview Section -->
+        <section class="about-section-container" id="blog-section" data-aos="fade-up">
+            <div class="about-section">
+                <div class="section-heading">
+                    <h2 class="section-heading-article" tabindex="0" aria-label="Blog heading">
+                        &#60;/Blog&#62;
+                    </h2>
+                    <p class="sectionHeadingP"></p>
+                </div>
+
+                <div class="info-dp-section">
+                    <div class="about-info">
+                        <p tabindex="0">
+                            Any blog posts I make would go here.
+                        </p>
+                        <br>
+                        <p tabindex="0">
+                            Stay tuned for my thoughts and experiences on software development, cybersecurity, and other technology-related topics.
+                        </p>
+                    </div>
+
+                    <div class="dp" data-aos="fade-up">
+                        <img src="assets/blog.webp" alt="Blog illustration" tabindex="0" aria-label="Blog illustration">
+                    </div>
+                </div>
+                
+                <div class="blog-posts">
+                    <article>
+                        <h2>My Journey in Programming</h2>
+                        <time datetime="2025-05-01">May 1, 2025</time>
+                        <p>This is a placeholder for a blog post about my programming journey.</p>
+                        <a href="#" class="cta">
+                            <span>Read more</span>
+                            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article>
+                        <h2>Linux: My Daily Driver</h2>
+                        <time datetime="2025-04-15">April 15, 2025</time>
+                        <p>This is a placeholder for a blog post about using Linux as my daily driver.</p>
+                        <a href="#" class="cta">
+                            <span>Read more</span>
+                            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article>
+                        <h2>My Experience with Cybersecurity</h2>
+                        <time datetime="2025-03-20">March 20, 2025</time>
+                        <p>This is a placeholder for a blog post about my experiences with cybersecurity.</p>
+                        <a href="#" class="cta">
+                            <span>Read more</span>
+                            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Andrew Parker Hunt. All rights reserved.</p>
-    </footer>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function hamburgerMenu() {
+            document.getElementById('mobiletogglemenu').classList.toggle('show-toggle-menu');
+            document.getElementById('burger-bar1').classList.toggle('hamburger-animation1');
+            document.getElementById('burger-bar2').classList.toggle('hamburger-animation2');
+            document.getElementById('burger-bar3').classList.toggle('hamburger-animation3');
+            document.body.classList.toggle('stopscrolling');
+        }
+
+        function hidemenubyli() {
+            document.getElementById('mobiletogglemenu').classList.remove('show-toggle-menu');
+            document.getElementById('burger-bar1').classList.remove('hamburger-animation1');
+            document.getElementById('burger-bar2').classList.remove('hamburger-animation2');
+            document.getElementById('burger-bar3').classList.remove('hamburger-animation3');
+            document.body.classList.remove('stopscrolling');
+        }
+
+        function settingtoggle() {
+            document.getElementById('setting-container').classList.toggle('settingactivate');
+            document.getElementById('visualmodetogglebuttoncontainer').classList.toggle('visualmodeshow');
+        }
+
+        function visualmode() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
