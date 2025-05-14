@@ -163,6 +163,21 @@
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Andrew Parker Hunt. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -198,6 +213,9 @@
         window.addEventListener('load', function() {
             document.getElementById('preloader').style.display = 'none';
         });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000">
-    <meta name="description" content="Andrew Parker Hunt's Projects | Explore my portfolio of software development and technology projects">
-    <meta name="keywords" content="Andrew Parker Hunt, Projects, Portfolio, Software Development, Programming">
+    <meta name="description" content="Thank you for contacting Andrew Parker Hunt">
+    <meta name="keywords" content="Andrew Parker Hunt, Portfolio, Contact, Thank You">
     <meta name="author" content="Andrew Parker Hunt">
-    <title>Projects - Andrew Parker Hunt</title>
+    <title>Thank You - Andrew Parker Hunt</title>
     <link rel="icon" href="assets/memoji-circle.webp" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,6 +19,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 70vh;
+            padding: 0 20px;
+        }
+        
+        .thank-you-container h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            color: var(--color-white);
+            font-family: fira code;
+        }
+        
+        .thank-you-container p {
+            font-size: 2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            color: var(--color-ddd-color);
+            line-height: 1.6;
+        }
+        
+        .return-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--color-white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            font-family: fira code;
+            position: relative;
+            overflow: hidden;
+            border-radius: 7px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .return-btn::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #2b2f4e;
+            z-index: -1;
+            border-radius: 7px;
+        }
+        
+        .return-btn:hover {
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -53,9 +111,15 @@
                         </a>
                     </li>
 
-                    <li class="projects activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+                    <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
                         <a href="projects.html" aria-label="projects menu button">
                             &#10100; Projects &#10101;
+                        </a>
+                    </li>
+                    
+                    <li class="contact" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="900">
+                        <a href="contact.html" aria-label="contact menu button">
+                            &#10100; Contact &#10101;
                         </a>
                     </li>
                 </ul>
@@ -95,107 +159,25 @@
                     </a>
                 </li>
                 
-                <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects activeThismobiletab" onclick="hidemenubyli()">
+                <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
                     <a href="projects.html" tabindex="0" aria-label="projects menu button">
                         &#60;/Projects&#62;
+                    </a>
+                </li>
+                
+                <li id="contact-mobile-tab" class="mobile-navbar-tabs-li contact" onclick="hidemenubyli()">
+                    <a href="contact.html" tabindex="0" aria-label="contact menu button">
+                        &#60;/Contact&#62;
                     </a>
                 </li>
             </ul>
         </div>
 
-        <!-- Projects Section -->
-        <section class="projects-section-container" id="projects">
-            <div class="projects-section-div">
-                <div class="section-heading" data-aos="fade-up">
-                    <h2 class="section-heading-article" class="shimmer" tabindex="0" aria-label="My projects starts from here">
-                        &#60;/Projects&#62;
-                    </h2>
-                    <p class="sectionHeadingP"></p>
-                </div>
-
-                <div class="project-boxes-div">
-                    <!-- Trion Website Project -->
-                    <div data-aos="fade-up" class="project-box-wrapper">
-                        <div class="project-box project-box1" id="project-box1">
-                            <div class="info-div">
-                                <article class="ProjectHeading">Trion Website</article>
-                                <p class="ProjectDescription">
-                                    Website for Trion Supercars
-                                </p>
-                                <div class="project-buttons">
-                                    <a href="https://github.com/" target="_blank" class="github-btn" aria-label="Visit project on GitHub">
-                                        <span>GitHub</span>
-                                    </a>
-                                    <a href="#" target="_blank" class="cta" aria-label="Visit project Live">
-                                        <span>Live view</span>
-                                        <svg viewBox="0 0 13 10" height="10px" width="15px">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="image-div">
-                                <img src="imgs/noirt.png" alt="Trion website preview image">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PETEr Project -->
-                    <div class="project-box-wrapper" data-aos="fade-up">
-                        <div class="project-box project-box2" id="project-box2">
-                            <div class="info-div">
-                                <article class="ProjectHeading">PETEr</article>
-                                <p class="ProjectDescription">
-                                    Science Fair Robot 2022 - 2024 (PoC)
-                                </p>
-                                <div class="project-buttons">
-                                    <a href="https://github.com/" target="_blank" class="github-btn" aria-label="Visit project on GitHub">
-                                        <span>GitHub</span>
-                                    </a>
-                                    <a href="#" target="_blank" class="cta" aria-label="Visit project Live">
-                                        <span>Live view</span>
-                                        <svg viewBox="0 0 13 10" height="10px" width="15px">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="image-div">
-                                <img src="/imgs/as7265x.jpg" alt="PETEr project preview image">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Terry-game Project -->
-                    <div class="project-box-wrapper" data-aos="fade-up">
-                        <div class="project-box project-box3" id="project-box3">
-                            <div class="info-div">
-                                <article class="ProjectHeading">Terry-game - AfterDavis</article>
-                                <p class="ProjectDescription">
-                                    A game made in the memory of Terry A. Davis
-                                </p>
-                                <div class="project-buttons">
-                                    <a href="https://github.com/" target="_blank" class="github-btn" aria-label="Visit project on GitHub">
-                                        <span>GitHub</span>
-                                    </a>
-                                    <a href="#" target="_blank" class="cta" aria-label="Visit project Live">
-                                        <span>Live view</span>
-                                        <svg viewBox="0 0 13 10" height="10px" width="15px">
-                                            <path d="M1,5 L11,5"></path>
-                                            <polyline points="8 1 12 5 8 9"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="image-div">
-                                <img src="/imgs/afterdavis.png" alt="Terry-game project preview image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Thank You Section -->
+        <section class="thank-you-container" data-aos="fade-up">
+            <h1>Thank You!</h1>
+            <p>Your message has been received. I'll get back to you as soon as possible.</p>
+            <a href="index.html" class="return-btn">Return to Homepage</a>
         </section>
     </main>
 
@@ -207,6 +189,7 @@
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="footer-copyright">
                 &copy; <span id="current-year"></span> Andrew Parker Hunt. All rights reserved.

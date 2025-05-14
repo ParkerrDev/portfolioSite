@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000">
+    <meta name="description" content="Contact Andrew Parker Hunt | Get in touch about projects, opportunities, or questions">
+    <meta name="keywords" content="Andrew Parker Hunt, Contact, Portfolio, Student, Software Development, Computer Science">
+    <meta name="author" content="Andrew Parker Hunt">
+    <title>Contact - Andrew Parker Hunt</title>
+    <link rel="icon" href="assets/memoji-circle.webp" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Contact form specific styles */
+        .contact-form {
+            width: 100%;
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--color-white);
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            font-family: fira code;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border-radius: 7px;
+            border: 1px solid var(--tech-stack-box-border-color);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            font-size: 1.6rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-Active-mode);
+            box-shadow: 0 0 0 2px rgba(15, 244, 164, 0.3);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: transparent;
+            color: var(--color-white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            font-family: fira code;
+            position: relative;
+            overflow: hidden;
+            border-radius: 7px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #2b2f4e;
+            z-index: -1;
+            border-radius: 7px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .contact-info {
+            margin-top: 40px;
+        }
+        
+        .contact-info h3 {
+            color: var(--color-white);
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+            font-family: fira code;
+        }
+        
+        .contact-info p {
+            color: var(--color-ddd-color);
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a {
+            color: var(--color-Active-mode);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-social {
+            margin-top: 30px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-form-container, .contact-info-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div id="preloader"></div>
+    <noscript>Allow Javascript</noscript>
+
+    <header>
+        <div class="navbar breath" id="navbar">
+            <div class="hey">Hey!</div>
+            <div class="logo" tabindex="0" aria-label="Andrew Parker Hunt logo">
+                <div class="logo-top">
+                    <img src="/imgs/memoji-circle.webp" alt="animation-head" id="nav-avatar">
+                </div>
+            </div>
+            <div class="navbar-tabs box-shadow" id="navbar-tabs">
+                <ul class="navbar-tabs-ul">
+                    <li class="home" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+                        <a href="index.html" tabindex="0" aria-label="Home menu button">
+                            &#10100; Home &#10101;
+                        </a>
+                    </li>
+
+                    <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+                        <a href="about.html" aria-label="about menu button">
+                            &#10100; About &#10101;
+                        </a>
+                    </li>
+
+                    <li class="blog" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+                        <a href="blog.html" aria-label="blog menu button">
+                            &#10100; Blog &#10101;
+                        </a>
+                    </li>
+
+                    <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+                        <a href="projects.html" aria-label="projects menu button">
+                            &#10100; Projects &#10101;
+                        </a>
+                    </li>
+                    
+                    <li class="contact activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="900">
+                        <a href="contact.html" aria-label="contact menu button">
+                            &#10100; Contact &#10101;
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Mobile hamburger menu -->
+        <div class="hamburger" id="hamburger" data-aos="fade">
+            <div class="hamburgerbase">
+                <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
+                    <span class="burger-bar" id="burger-bar1"></span>
+                    <span class="burger-bar" id="burger-bar2"></span>
+                    <span class="burger-bar" id="burger-bar3"></span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="mobiletogglemenu" id="mobiletogglemenu">
+            <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
+                <li id="home-mobile-tab" class="mobile-navbar-tabs-li home" onclick="hidemenubyli()">
+                    <a href="index.html" tabindex="0" aria-label="Home menu button">
+                        &#60;/Home&#62;
+                    </a>
+                </li>
+
+                <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
+                    <a href="about.html" tabindex="0" aria-label="about menu button">
+                        &#60;/AboutMe&#62;
+                    </a>
+                </li>
+                
+                <li id="blog-mobile-tab" class="mobile-navbar-tabs-li blog" onclick="hidemenubyli()">
+                    <a href="blog.html" tabindex="0" aria-label="blog menu button">
+                        &#60;/Blog&#62;
+                    </a>
+                </li>
+                
+                <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
+                    <a href="projects.html" tabindex="0" aria-label="projects menu button">
+                        &#60;/Projects&#62;
+                    </a>
+                </li>
+                
+                <li id="contact-mobile-tab" class="mobile-navbar-tabs-li contact activeThismobiletab" onclick="hidemenubyli()">
+                    <a href="contact.html" tabindex="0" aria-label="contact menu button">
+                        &#60;/Contact&#62;
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="about-section-container" id="contact" data-aos="fade-up">
+            <div class="about-section">
+                <div class="section-heading">
+                    <h2 class="section-heading-article" tabindex="0" aria-label="Contact heading">
+                        &#60;/Contact&#62;
+                    </h2>
+                    <p class="sectionHeadingP"></p>
+                </div>
+
+                <div class="info-dp-section">
+                    <div class="about-info">
+                        <p tabindex="0">
+                            Feel free to reach out to me for any questions, project inquiries, or just to say hello! 
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                        </p>
+
+                        <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                            <form action="thankyou.html" method="POST" id="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" class="form-control" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
+                        </div>
+                        
+                        <div class="contact-info" data-aos="fade-up" data-aos-delay="400">
+                            <h3>Contact Information</h3>
+                            <p>Email: <a href="mailto:email@parkerhunt.me">email@parkerhunt.me</a></p>
+                            <p>Location: Clovis, California</p>
+                            
+                            <div class="contact-social">
+                                <div class="links">
+                                    <ul>
+                                        <li><a href="https://github.com/ParkerrDev" aria-label="GitHub">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                    </path>
+                                                </svg>
+                                            </a></li>
+                                        <li><a href="https://x.com/AndrewParkerH" aria-label="X">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"></path>
+                                                </svg>
+                                            </a></li>
+                                        <li><a href="https://www.linkedin.com/in/andrew-hunt-9b3532331/" aria-label="LinkedIn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                                    </path>
+                                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                                    <circle cx="4" cy="4" r="2"></circle>
+                                                </svg>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dp" data-aos="fade-up" data-aos-delay="300">
+                        <img src="imgs/contact.webp" alt="Contact illustration" tabindex="0" aria-label="Contact illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Andrew Parker Hunt. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function hamburgerMenu() {
+            document.getElementById('mobiletogglemenu').classList.toggle('show-toggle-menu');
+            document.getElementById('burger-bar1').classList.toggle('hamburger-animation1');
+            document.getElementById('burger-bar2').classList.toggle('hamburger-animation2');
+            document.getElementById('burger-bar3').classList.toggle('hamburger-animation3');
+            document.body.classList.toggle('stopscrolling');
+        }
+
+        function hidemenubyli() {
+            document.getElementById('mobiletogglemenu').classList.remove('show-toggle-menu');
+            document.getElementById('burger-bar1').classList.remove('hamburger-animation1');
+            document.getElementById('burger-bar2').classList.remove('hamburger-animation2');
+            document.getElementById('burger-bar3').classList.remove('hamburger-animation3');
+            document.body.classList.remove('stopscrolling');
+        }
+
+        function settingtoggle() {
+            document.getElementById('setting-container').classList.toggle('settingactivate');
+            document.getElementById('visualmodetogglebuttoncontainer').classList.toggle('visualmodeshow');
+        }
+
+        function visualmode() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.display = 'none';
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Basic form validation
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (name === '' || email === '' || subject === '' || message === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Here you would normally send the form data to a server
+            // For this example, we'll just redirect to the thank you page
+            window.location.href = "thankyou.html";
+        });
+    </script>
+</body>
+</html>

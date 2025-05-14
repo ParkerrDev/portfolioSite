@@ -171,7 +171,29 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Blog redirect message -->
+        <section class="blog-redirect" data-aos="fade-up">
+            <div class="about-section">
+                <p>For the latest articles, please visit my blog at <a href="https://parkerhunt.me/blog">parkerhunt.me/blog</a></p>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="https://parkerhunt.me/blog">Blog</a>
+                <a href="projects.html">Projects</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Andrew Parker Hunt. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
@@ -208,6 +230,9 @@
         window.addEventListener('load', function() {
             document.getElementById('preloader').style.display = 'none';
         });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
